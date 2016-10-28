@@ -1,0 +1,26 @@
+
+<div ng-repeat="pic in photos" >
+
+
+  <!-- <img ng-src="images/{{pic.file_name}}" alt="{{pic.file_name}}">
+  <div ng-repeat = "com in pic.comments">
+    <a ng-href="#users/{{com.user.id}}">{{com.user.first_name}} {{com.user.last_name}}</a>: {{com.comment}}
+  </div> -->
+  <md-card>
+    <img ng-src="images/{{pic.file_name}}" alt="{{pic.file_name}}" class="md-pic">
+    <md-list>
+      <md-list-item  ng-repeat = "com in pic.comments" >
+        <md-card>
+          <div  layout="column" class="md-2-line">
+            <a ng-href="#users/{{com.user.id}}">{{com.user.first_name}} {{com.user.last_name}}
+            </a>
+            <h3> {{com.comment}}</h3>
+
+          </div>
+        </md-card>
+      </md-list-item>
+    </md-list>
+  </md-card>
+
+
+</div>

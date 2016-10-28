@@ -1,0 +1,34 @@
+<!-- <div>
+  {{user.first_name}} {{user.last_name}}
+</div>
+<div>Discription: {{user.description}}
+</div>
+<div>
+Occupation:{{user.occupation}}
+</div>
+<a ng-href="#photos/{{user.id}}"> Photos
+</a> -->
+
+
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+      {{user.first_name}} {{user.last_name}}
+    </md-card-title-text>
+
+  </md-card-title>
+
+  <md-card-content>
+    <md-list-item>
+      <div class="md-list-item-text" layout="column">
+        <h3>Discription: {{user.description}}
+        </h3>
+        <h4>
+          Occupation:{{user.occupation}}
+        </h4>
+        <a ng-href="#photos/{{user.id}}"> Photos
+        </a>
+      </div>
+    </md-list-item>
+  </md-card-content>
+</md-card>

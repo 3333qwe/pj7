@@ -31,20 +31,15 @@ cs142App.config(['$routeProvider',
         });
     }
 ])
-.
-run(function($rootScope, $location) {
+.run(function($rootScope, $location) {
     $rootScope.$on("$routeChangeStart", function(event, next, current) {
         console.log("rountchangeStart");
-
         console.log(event);
         if (!noOneIsLoggedIn()) {
             // no logged user, redirect to /login-register unless already there
             if (next.templateUrl !== "components/login-register/login-registerTemplate.html") {
                 console.log("not login");
                 console.log($location);
-
-
-
 
                 $location.path("/login-register");
                 console.log($location);
@@ -60,7 +55,6 @@ cs142App.controller('MainController', ['$scope', '$rootScope', '$location', '$re
         $scope.main = {
             title: 'Users'
         };
-
 
         /*
          * FetchModel - Fetch a model from the web server.
